@@ -1,25 +1,9 @@
 const computerChoice =()=>{
-    const random =Math.floor(Math.random()*3)
-    
-    switch(random){
-        case 0:
-            
-            return "rock";
-            break;
-        case 1:
-            
-            return "paper";
-            break;
-        case 2:
-            
-            return "scissors";
-            break;
-            
+   const choices  =["rock","paper","scissors"];
+    const choice = choices[Math.floor(Math.random()*choices.length)]
+    return choice;
     }
-        
-    }
-    
-    const playerChoice = ()=>{
+const playerChoice = ()=>{
        const answer= prompt("enter your choice");
         return answer.toLowerCase();
     }
@@ -29,36 +13,44 @@ const computerSelection = computerChoice()
 console.log(`computer took ${computerSelection}`)
 
 function play(player,computer){
-    if(player == "rock" &&  computer == "scissors"){
-        return "You win";
-    }else if (player == "scissors" && computer == "paper"){
-        return "You win";
-          }
-    else if(player == "rock" && computer == "paper"){
-        return "You win";
-          }
-    else if(player == "rock" && computer == "paper"){
-        return "You lose";
-          }
-    else if(player == "scissors" && computer== "rock"){
-        return "You lose";
-          }
-    else if(player == "paper" && computer == "scissors"){
-        return "You lose";
-          }
-    else if(player == "paper" && computer == "rock"){
+    if(
+        (player == "rock" &&  computer == "scissors")||
+        (player == "scissors" && computer == "paper")||
+        (player == "rock" && computer == "paper")||
+        (player == "paper" && computer == "rock"))
+        { 
+            
             return "You won";
+        }else if (
+        (player == "rock" && computer == "paper")||
+        (player == "scissors" && computer== "rock")||
+        (player == "scissors" && computer== "rock")||
+        (player == "paper" && computer == "scissors")
+        )
+        {   
+            return  "Computer won";
+        
+        }else{
+                return "Try again"
               }
-    else{
-        return "try again"
-    }
 
 }
-const game = ()=>{
-    for(let i=0;i<5;i++){
+console.log( play(playerSelection,computerSelection));
+function game(){
+const playerScore =0;
+const computerScore =0;
+const result = "";
+   console.log("game activated")
+    for(let i = 0;i<5;i++){
+        const result =play(playerSelection,computerSelection);
         
     }
+    if(playerScore>computerScore){
+        console.log("You won after 5 rounds")
+    }else{
+        console.log("Computer won after 5 rounds")
+    }
 }
-console.log(play(playerSelection,computerSelection));
+
 
     
