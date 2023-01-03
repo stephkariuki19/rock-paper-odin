@@ -3,11 +3,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>ODIN</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <title>ROCK PAPER SCISSORS</title>
 </head>
 <body>
+    <h2 class="heading">ROCK PAPER SCISSORS</h2>
+    <h5 class="tag">Pick one...</h5>
+    <div class="choices">
+        <button class="rock">ROCK</button>
+        <button class="paper">PAPER</button>
+        <button class="scissors">SCISSORS</button>
+    </div>
+    <div class="score-board">
+        <h4 class="score">Score</h4>
+        <h4 class="round">Round: </h4>
+        <h4 class="round-value">0</h4>
+        
+        <img class="person"src="https://cdn1.iconfinder.com/data/icons/app-user-interface-flat/64/user_man_user_interface_app_person-256.png" alt="">
+        <img  class="machine"src="https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Computer-256.png" alt="">
+            <div class="result">
+                <h2 class="player-result">0</h2>
+                <h2 class="computer-result">0</h2>
+            </div>
     
+    <div class="final-text">
+        <h1 class="game">GAME OVER</h1>
+        <h1 class="final-winner">COMPUTER WON</h1>
+        <h2>play again?</h2>
+        <button class="restart" onclick="window.location.reload()">restart</button>
+    </div>
+</div>
 </body>
 <script src="./rock.js"></script>
 </html>

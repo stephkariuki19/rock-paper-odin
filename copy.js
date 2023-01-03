@@ -1,3 +1,4 @@
+//scratch pad for rock.js
 const computerChoice =()=>{
    const choices  =["rock","paper","scissors"];
     const choice = choices[Math.floor(Math.random()*choices.length)]
